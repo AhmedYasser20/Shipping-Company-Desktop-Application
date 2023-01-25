@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CE0AC78-15FF-4F0B-99E3-F725C8432823}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Shipping_Company</RootNamespace>
+    <AssemblyName>Shipping Company</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller.cs" />
+    <Compile Include="DBManager.cs" />
+    <Compile Include="change_password.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="change_password.Designer.cs">
+      <DependentUpon>change_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_product_recieved.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_product_recieved.Designer.cs">
+      <DependentUpon>employee_product_recieved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_pay_bill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_pay_bill.Designer.cs">
+      <DependentUpon>employee_pay_bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_product_details.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_product_details.Designer.cs">
+      <DependentUpon>employee_product_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manager_add_truck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manager_add_truck.Designer.cs">
+      <DependentUpon>manager_add_truck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manager_add_manager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manager_add_manager.Designer.cs">
+      <DependentUpon>manager_add_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manager_view_all_assets.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manager_view_all_assets.Designer.cs">
+      <DependentUpon>manager_view_all_assets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manager_add_supervisor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manager_add_supervisor.Designer.cs">
+      <DependentUpon>manager_add_supervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manager_move_employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manager_move_employee.Designer.cs">
+      <DependentUpon>manager_move_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manager_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manager_main.Designer.cs">
+      <DependentUpon>manager_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manager_update_salaries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manager_update_salaries.Designer.cs">
+      <DependentUpon>manager_update_salaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manager_fire_employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manager_fire_employee.Designer.cs">
+      <DependentUpon>manager_fire_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoredProcedures.cs" />
+    <Compile Include="supervisor_truck_arrived.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="supervisor_truck_arrived.Designer.cs">
+      <DependentUpon>supervisor_truck_arrived.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor_create_trip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="supervisor_create_trip.Designer.cs">
+      <DependentUpon>supervisor_create_trip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor_assign_products.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="supervisor_assign_products.Designer.cs">
+      <DependentUpon>supervisor_assign_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor_view_avail_trucks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="supervisor_view_avail_trucks.Designer.cs">
+      <DependentUpon>supervisor_view_avail_trucks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor_hire_employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="supervisor_hire_employee.Designer.cs">
+      <DependentUpon>supervisor_hire_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor_hire_driver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="supervisor_hire_driver.Designer.cs">
+      <DependentUpon>supervisor_hire_driver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_add_client.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_add_client.Designer.cs">
+      <DependentUpon>employee_add_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor_update_price.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="supervisor_update_price.Designer.cs">
+      <DependentUpon>supervisor_update_price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supervisor_main.Designer.cs">
+      <DependentUpon>supervisor_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_main.Designer.cs">
+      <DependentUpon>employee_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_update_client.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_update_client.Designer.cs">
+      <DependentUpon>employee_update_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_view_clients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_view_clients.Designer.cs">
+      <DependentUpon>employee_view_clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login_page.Designer.cs">
+      <DependentUpon>login_page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="employee_add_product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee_add_product.Designer.cs">
+      <DependentUpon>employee_add_product.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="change_password.resx">
+      <DependentUpon>change_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_product_recieved.resx">
+      <DependentUpon>employee_product_recieved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_pay_bill.resx">
+      <DependentUpon>employee_pay_bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_product_details.resx">
+      <DependentUpon>employee_product_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manager_add_truck.resx">
+      <DependentUpon>manager_add_truck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manager_add_manager.resx">
+      <DependentUpon>manager_add_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manager_view_all_assets.resx">
+      <DependentUpon>manager_view_all_assets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manager_add_supervisor.resx">
+      <DependentUpon>manager_add_supervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manager_move_employee.resx">
+      <DependentUpon>manager_move_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manager_main.resx">
+      <DependentUpon>manager_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manager_update_salaries.resx">
+      <DependentUpon>manager_update_salaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manager_fire_employee.resx">
+      <DependentUpon>manager_fire_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supervisor_truck_arrived.resx">
+      <DependentUpon>supervisor_truck_arrived.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supervisor_create_trip.resx">
+      <DependentUpon>supervisor_create_trip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supervisor_assign_products.resx">
+      <DependentUpon>supervisor_assign_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supervisor_view_avail_trucks.resx">
+      <DependentUpon>supervisor_view_avail_trucks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supervisor_hire_employee.resx">
+      <DependentUpon>supervisor_hire_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supervisor_hire_driver.resx">
+      <DependentUpon>supervisor_hire_driver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_add_client.resx">
+      <DependentUpon>employee_add_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_add_product.resx">
+      <DependentUpon>employee_add_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supervisor_update_price.resx">
+      <DependentUpon>supervisor_update_price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supervisor_main.resx">
+      <DependentUpon>supervisor_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_main.resx">
+      <DependentUpon>employee_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_update_client.resx">
+      <DependentUpon>employee_update_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_view_clients.resx">
+      <DependentUpon>employee_view_clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login_page.resx">
+      <DependentUpon>login_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
