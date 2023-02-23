@@ -81,7 +81,7 @@ Pictures/Schema.png)
 ● Add employees data (Hire employee)<br/>
 ● Receive the trucks<br/>
 ● Create trip (assign driver / truck)<br/>
-● View available driver/trucks (check if they are<br/>
+● View available driver/trucks (check if they are
 available to make a trip)<br/>
 ● Assign products to available trucks<br/>
 ### Manager
