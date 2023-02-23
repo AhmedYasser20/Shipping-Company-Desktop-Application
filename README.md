@@ -47,10 +47,12 @@ Database schema was defined using [Datagrip](https://www.jetbrains.com/datagrip/
 ## Database Entity-Relationship diagram
 
 ![App Screenshot](
-Pictures/1.png)
+Pictures/Schema.png)
 
 ## Screenshots Samples
-![App Screenshot]()
+![App Screenshot](Pictures/11.png)
+![App Screenshot](Pictures/12.png)
+![App Screenshot](Pictures/GifPic.gif)
 
 
 
